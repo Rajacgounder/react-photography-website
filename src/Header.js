@@ -1,28 +1,58 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Header.css';
 
 function Header() {
-  const [scrolled, setScrolled] = React.useState(false);
+  // const [scrolled, setScrolled] = React.useState(false);
 
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 200) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  });
+  // const handleScroll = () => {
+  //   const offset = window.scrollY;
+  //   if (offset > 200) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  // });
 
-  let x = ['header'];
-  if (scrolled) {
-    x.push('scrolled');
-  }
+  // let x = ['header'];
+  // if (scrolled) {
+  //   x.push('scrolled');
+  // }
   return (
     <nav className="header">
+      <Carousel autoPlay>
+        <div>
+          <img
+            alt=""
+            src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg"
+          />
+        </div>
+        <div>
+          <img
+            alt=""
+            src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg"
+          />
+        </div>
+        <div>
+          <img
+            alt=""
+            src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg"
+          />
+          <p className="legend">Legend 3</p>
+        </div>
+        <div>
+          <img
+            alt=""
+            src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg"
+          />
+          <p className="legend">Legend 4</p>
+        </div>
+      </Carousel>
       <Link className="header_link">
         <img
           className="header_logo"
