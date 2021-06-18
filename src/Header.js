@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
+import AwesomeSliderStyles from 'react-awesome-slider/src/styled/scale-out-animation.scss';
 import './Header.css';
-import styles from './Header.scss';
 
 function Header() {
   // const [scrolled, setScrolled] = React.useState(false);
@@ -26,10 +25,11 @@ function Header() {
   // }
   return (
     <nav className="header">
-      <AwesomeSlider cssModule={styles}>
-        <div data-src="/path/to/image-0.png" />
-        <div data-src="/path/to/image-1.png" />
+      <AwesomeSlider cssModule={AwesomeSliderStyles}>
+        <div data-src="/path/to/image-0.jpg" />
+        <div data-src="/path/to/image-1.jpg" />
         <div data-src="/path/to/image-2.jpg" />
+        <div data-src="/path/to/image-3.jpg" />
       </AwesomeSlider>
       <Link className="header_link">
         <img
