@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 import './Header.css';
+import styles from './Header.scss';
 
 function Header() {
   // const [scrolled, setScrolled] = React.useState(false);
@@ -25,34 +26,11 @@ function Header() {
   // }
   return (
     <nav className="header">
-      <Carousel autoPlay>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg"
-          />
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg"
-          />
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg"
-          />
-          <p className="legend">Legend 3</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg"
-          />
-          <p className="legend">Legend 4</p>
-        </div>
-      </Carousel>
+      <AwesomeSlider cssModule={styles}>
+        <div data-src="/path/to/image-0.png" />
+        <div data-src="/path/to/image-1.png" />
+        <div data-src="/path/to/image-2.jpg" />
+      </AwesomeSlider>
       <Link className="header_link">
         <img
           className="header_logo"
