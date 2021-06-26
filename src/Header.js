@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import AwesomeSlider from 'react-awesome-slider';
-import AwesomeSliderStyles from 'react-awesome-slider/src/styled/scale-out-animation.scss';
 import './Header.css';
 
 function Header() {
@@ -25,12 +23,6 @@ function Header() {
   // }
   return (
     <nav className="header">
-      <AwesomeSlider cssModule={AwesomeSliderStyles}>
-        <div data-src="/path/to/image-0.jpg" />
-        <div data-src="/path/to/image-1.jpg" />
-        <div data-src="/path/to/image-2.jpg" />
-        <div data-src="/path/to/image-3.jpg" />
-      </AwesomeSlider>
       <Link className="header_link">
         <img
           className="header_logo"
@@ -60,7 +52,7 @@ function Header() {
             <span className="span_design">INFO</span>
           </div>
         </Link>
-        <Link to="/" className="header_link">
+        <Link to="/Contactus" className="header_link">
           <div className="header_option">
             <span className="span_design">CONTACT</span>
           </div>
