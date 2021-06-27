@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './components/Footer';
+import Header from '../Header';
+// import Footer from './components/Footer';
 
 function Contactus() {
   return (
@@ -12,7 +12,7 @@ function Contactus() {
       <div>
         <h1>Images</h1>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
